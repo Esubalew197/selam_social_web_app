@@ -33,7 +33,6 @@ def index(request):
 
     feed_list = list(chain(*feed))
 
-
     # user suggestion starts
     all_users = User.objects.all()
     user_following_all = []
