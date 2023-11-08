@@ -11,6 +11,7 @@ import random
 
 @login_required(login_url='signin')
 def index(request):
+
     user_object = User.objects.get(username=request.user.username)
     user_profile = Profile.objects.get(user=user_object)
 
@@ -23,10 +24,15 @@ def index(request):
         user_following_list.append(users.user)
 
     for usernames in user_following_list:
-        feed_lists = Post.objects.filter(user=usernames)
+        my_posts = Post.objects.filter(user=request.user)
+        following_posts = Post.objects.filter(user=usernames)
+        feed_lists = my_posts | following_posts
+        #feed_lists = Post.objects.filter(user=usernames)
+        #feed_lists = Post.objects.all()
         feed.append(feed_lists)
 
     feed_list = list(chain(*feed))
+
 
     # user suggestion starts
     all_users = User.objects.all()
@@ -35,7 +41,7 @@ def index(request):
     for user in user_following:
         user_list = User.objects.get(username=user.user)
         user_following_all.append(user_list)
-    
+
     new_suggestions_list = [x for x in list(all_users) if (x not in list(user_following_all))]
     current_user = User.objects.filter(username=request.user.username)
     final_suggestions_list = [x for x in list(new_suggestions_list) if ( x not in list(current_user))]
