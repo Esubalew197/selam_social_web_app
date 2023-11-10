@@ -1,6 +1,6 @@
 /*--- big screen ----*/
 
-@media screen and (max-width: 1920px) and (min-width: 1601px) {
+@media only screen and (max-width: 1920px) and (min-width: 1601px) {
     .edit-phto {
         left: 369px;
     }
