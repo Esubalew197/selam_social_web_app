@@ -1,4 +1,5 @@
 {% load static %}
+{% load bootstrap4 %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +14,9 @@
     <link rel="stylesheet" href="{% static 'assets/css/uikit.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/tailwind.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+
+    {% bootstrap_css %}
 
 </head>
 
@@ -163,6 +167,8 @@
             background-size: cover;
         }
     </style>
+
+{% bootstrap_javascript jquery='full' %}
 </body>
 
 </html>
