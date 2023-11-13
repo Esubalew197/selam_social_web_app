@@ -1,12 +1,12 @@
 {% load static %}
-{% load bootstrap4 %}
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{% static 'assets/images/favicon.png' %}" rel="icon" type="image/png">
+    <!-- <link href="{% static 'assets/images/favicon.png' %}" rel="icon" type="image/png"> -->
+    <link href="{% static 'images/selam_icon2.jpg' %}" rel="icon" type="image/png">
     <title>Settings</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,9 +14,6 @@
     <link rel="stylesheet" href="{% static 'assets/css/uikit.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/tailwind.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
-
-    {% bootstrap_css %}
 
 </head>
 
@@ -157,18 +154,15 @@
 
 
     <script src="{% static '../../unpkg.com/ionicons%405.2.3/dist/ionicons.js' %}"></script>
-    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+
 
     <style>
-        body {
+        /* body {
             background-image: url("{% static 'images/background3.jpg' %}");
             background-repeat: no-repeat;
             background-size: cover;
-        }
+        } */
     </style>
-
-{% bootstrap_javascript jquery='full' %}
 </body>
 
 </html>

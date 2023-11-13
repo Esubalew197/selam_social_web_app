@@ -1,5 +1,4 @@
 {% load static %}
-{% load bootstrap4 %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{% static 'favicon.png' %}" rel="icon" type="image/png">
+    <link href="{% static 'images/selam_icon2.jpg' %}" rel="icon" type="image/png">
     <title>Home</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,24 +15,30 @@
     <link rel="stylesheet" href="{% static 'assets/css/uikit.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/tailwind.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
-
-    {% bootstrap_css %}
 </head>
 
 <body>
 
             <header>
                 <div class="header_inner">
+
+                    <style>
+                        header {
+                            background-color: #1c4b82;
+                                }
+                    </style>
+                    
                     <form action="/search" method="POST">
                     {% csrf_token %}
                     <div class="left-side">
                         <!-- Logo -->
-                        <div id="logo" class=" uk-hidden@s">
+                        <div id="logo" class=" flex items-center lg:justify-between justify-around">
                             <a href="home.html">
-                                <b><h1 style="text-transform: uppercase;">selam</h1></b>
+                                <b><h1 style="font-size: 1.5rem;"><img src=static/images/selam_logo1.jpg></h1></b>
+                                <!-- <b><h1 style="text-transform: uppercase;">selam</h1></b> -->
                             </a>
                         </div>
 
@@ -44,6 +49,7 @@
                         <!-- <div class="header_search"> -->
                             <input type="text" name="username" placeholder="Search for username..">&nbsp; &nbsp;
                             <button type="submit"><i class="fa fa-search fa-1x"></i></button>
+                            
                         <!-- </div> -->
 
                     </div>
@@ -55,6 +61,7 @@
                             <ion-icon name="add-circle" class="-mb-1
                              mr-1 opacity-90 text-xl uilus-circle"></ion-icon> Upload Pics
                         </a>
+                        
                          <!-- upload dropdown box -->
                         <div uk-dropdown="pos: top-right;mode:click ; animation: uk-animation-slide-bottom-small" class="header_dropdown">
     
@@ -410,14 +417,14 @@
     <script src="{% static '../../unpkg.com/ionicons%405.2.3/dist/ionicons.js' %}"></script>
 
     <style>
-        body {
+        /* body {
             background-image: url("{% static 'images/background3.jpg' %}");
             background-repeat: no-repeat;
             background-size: cover;
-        }
-    </style>
+        } */
+   
 
-{% bootstrap_javascript jquery='full' %}
+    </style>
 </body>
 
 

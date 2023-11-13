@@ -1,5 +1,4 @@
 {% load static %}
-{% load bootstrap4 %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +8,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{% static 'assets/images/favicon.png' %}" rel="icon" type="image/png">
+    <link href="{% static 'images/selam_icon2.jpg' %}" rel="icon" type="image/png">
+    <!-- <link href="{% static 'assets/images/favicon.png' %}" rel="icon" type="image/png"> -->
     <title>Sign Up - Selam</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,9 +17,6 @@
     <link rel="stylesheet" href="{% static 'assets/css/uikit.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/tailwind.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
-
-    {% bootstrap_css %}
 
 </head>
 
@@ -29,6 +26,12 @@
     <div id="wrapper" class="flex flex-col justify-between h-screen">
 
         <!-- header-->
+
+        <style>
+            .bg-white {
+                background-color: #1c4b82;
+                    }
+        </style>
         <div class="bg-white py-4 shadow dark:bg-gray-800">
             <div class="max-w-6xl mx-auto">
 
@@ -36,12 +39,13 @@
                 <div class="flex items-center lg:justify-between justify-around">
 
                     <a href="trending.html">
-                        <b><h1 style="font-size: 1.5rem;">Selam</h1></b>
+                        <b><h1 style="font-size: 1.5rem;"><img src=static/images/selam_logo1.jpg></h1></b>
+                        <!-- <b><h1 style="font-size: 1.5rem;">Selam</h1></b> -->
                     </a>
 
                     <div class="capitalize flex font-semibold hidden lg:block my-2 space-x-3 text-center text-sm">
                         
-                        <a href="/signin" class="bg-pink-500 pink-500 px-6 py-3 rounded-md shadow text-white">Login</a>
+                        <a href="/signin" class="px-6 py-3 rounded-md shadow text-white">Login</a>
                     </div>
 
                 </div>
@@ -52,7 +56,7 @@
 
         <div>
             <div class="lg:p-12 max-w-md max-w-xl lg:my-0 my-12 mx-auto p-6 space-y-">
-                <h1 class="lg:text-3xl text-xl font-semibold mb-6"> Sign Up</h1>
+                <h1 class="lg:text-3xl text-xl font-semibold mb-6 text-white"> Sign Up</h1>
                 <!--<p class="mb-2 text-black text-lg"> Register to manage your account </p>-->
                 
 
@@ -85,9 +89,9 @@
                         </div>
                         <a href="#"> Terms and Conditions</a>
                     </div> -->
-                    <button type="submit" class="bg-gradient-to-br from-blue-500 py-3 rounded-md text-white text-xl to-blue-400 w-full">Sign Up</button>
+                    <button type="submit" class=" py-3 rounded-md text-white text-xl to-blue-400 w-full">Sign Up</button>
                     <div class="text-center mt-5 space-x-2">
-                        <p class="text-base"> Do you have an account? <a href="/signin"> Login </a></p>
+                        <p class="text-white"> Do you have an account? <a href="/signin"> Login </a></p>
                     </div>
                 </form>
 
@@ -98,15 +102,15 @@
         
         <!-- Footer -->
 
-        <div class="lg:mb-5 py-3 uk-link-reset">
-            <div class="flex flex-col items-center justify-between lg:flex-row max-w-6xl mx-auto lg:space-y-0 space-y-3">
-                <div class="flex space-x-2 text-gray-700 uppercase">
+        <div class="lg:mb-5 py-3 uk-link-reset text-black">
+            <div class="flex flex-col items-center justify-between lg:flex-row max-w-6xl mx-auto lg:space-y-0 space-y-3 ">
+                <div class=" flex space-x-2 text-black uppercase ">
                     <a href="#"> About</a>
                     <a href="#"> Help</a>
                     <a href="#"> Terms</a>
                     <a href="#"> Privacy</a>
                 </div>
-                <p class="capitalize"> © copyright 2020 by socol</p>
+                <p class="capitalize"> © copyright 2023 by selam</p>
             </div>
         </div>
 
@@ -157,16 +161,15 @@
     <script src="{% static 'assets/js/simplebar.js' %}"></script>
     <script src="{% static 'assets/js/custom.js' %}"></script>
 
-
-    <style>
+    <!-- <style>
         body {
             background-image: url("{% static 'images/background3.jpg' %}");
             background-repeat: no-repeat;
             background-size: cover;
         }
-    </style>
+    </style> -->
 
-{% bootstrap_javascript jquery='full' %}
+
 </body>
 
 

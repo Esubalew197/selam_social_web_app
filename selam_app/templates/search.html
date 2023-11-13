@@ -1,5 +1,4 @@
 {% load static %}
-{% load bootstrap4 %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +7,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="favicon.png" rel="icon" type="image/png">
+    <!-- <link href="favicon.png" rel="icon" type="image/png"> -->
+    <link href="{% static 'images/selam_icon2.jpg' %}" rel="icon" type="image/png">
     <title>Search</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,9 +17,6 @@
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/tailwind.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
-
-    {% bootstrap_css %}
 </head>
 
 <body>
@@ -388,8 +385,6 @@
 
 
     <script src="{% static '../../unpkg.com/ionicons%405.2.3/dist/ionicons.js' %}"></script>
-
-    {% bootstrap_javascript jquery='full' %}
 </body>
 
 

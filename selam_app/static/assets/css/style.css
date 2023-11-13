@@ -8,7 +8,7 @@
  
 
 body{
-  background-color: #B0B3B8!important;
+  background-color: #1c4b82!important;
 }
 
 /* ---------------------------------- */
@@ -1564,7 +1564,7 @@ header .header_inner .left-side {
 }
 
 header .header_inner .left-side .header_search {
-  position: relative;
+  position: absolute;
 }
 
 header .header_inner .left-side .header_search input {
@@ -2535,4 +2535,3 @@ header .uk-dropdown {
     position: absolute;
   }
 }
- 
